@@ -1,0 +1,1458 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZsqApp.Core.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.AlipayNotifyController">
+            <summary>
+            支付宝充值回调
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.AlipayNotifyController._appSettings">
+            <summary>
+            支付宝配置文件
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.AlipayNotifyController._recharge">
+            <summary>
+            充值
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.AlipayNotifyController._biz">
+            <summary>
+            章鱼
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.AlipayNotifyController._log">
+            <summary>
+            lo4
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.AlipayNotifyController._accout">
+            <summary>
+            php
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.AlipayNotifyController._alipayService">
+            <summary>
+            支付宝
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.AlipayNotifyController.#ctor(Microsoft.Extensions.Options.IOptions{ZsqApp.Core.Models.AliPaySetting},ZsqApp.Core.Interfaces.Recharge.IRecharge,ZsqApp.Core.Interfaces.ZhangYu.IBiz,Alipay.AopSdk.AspnetCore.IAlipayService,ZsqApp.Core.Interfaces.AccoutSystem.IAccout)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="options"></param>
+            <param name="recharge"></param>
+            <param name="biz"></param>
+            <param name="alipayService"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.AlipayNotifyController.Notify(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            支付宝异步回调
+            author:陶林辉
+            </summary>
+            <param name="sArray"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.DomeController.Dome">
+            <summary>
+            Dome this instance.
+            </summary>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.ExternalController">
+            <summary>
+            给第三方服务端提供对外接口
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.ExternalController._sys">
+            <summary>
+            系统
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.ExternalController._token">
+            <summary>
+            认证
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.ExternalController._biz">
+            <summary>
+            章鱼
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.ExternalController._user">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.ExternalController._log">
+            <summary>
+            log4
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.ExternalController._recharge">
+            <summary>
+            充值
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.ExternalController._accout">
+            <summary>
+            php
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.ExternalController._options">
+            <summary>
+            海峡竞技
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.#ctor(ZsqApp.Core.Interfaces.System.ISystems,ZsqApp.Core.Interfaces.User.IToken,ZsqApp.Core.Interfaces.ZhangYu.IBiz,ZsqApp.Core.Interfaces.User.IUser,ZsqApp.Core.Interfaces.Recharge.IRecharge,ZsqApp.Core.Interfaces.AccoutSystem.IAccout,Microsoft.Extensions.Options.IOptions{ZsqApp.Core.Models.HaiXiaSetting})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="sys"></param>
+            <param name="token"></param>
+            <param name="biz"></param>
+            <param name="user"></param>
+            <param name="recharge"></param>
+            <param name="accout"></param>
+            <param name="UserTestid"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.Tokenverify(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            非APP端用户认证
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.userverify(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            非APP端用户认证
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.GetUserInfo(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            获取用户信息
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.Exchange(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            商品兑换
+            author:林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.Exchange_H5(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            商品兑换
+            author:林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.Refund(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            订单退款
+            author:林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.Recharge(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            对外充值
+            author:林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.GetUserIdByPhone(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            根据手机号码获取用户id
+            author:林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.WeChatInfo(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            微信充值获取商品信息和用户userId
+            author:林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.ExternalController.Competitive_exchange(ZsqApp.Core.WebApi.Model.ExternalRequesViewModel)">
+            <summary>
+            海峡竞技消费
+            author:白尚德
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.GameController">
+            <summary>
+            游戏异步通知
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.GameController._game">
+            <summary>
+            IGame 游戏相关服务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.GameController._sys">
+            <summary>
+            ISystems 系统相关服务
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.GameController.#ctor(ZsqApp.Core.Interfaces.Game.IGame,ZsqApp.Core.Interfaces.System.ISystems)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="game"></param>
+            <param name="sys"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.GameController.GameBet(ZsqApp.Core.WebApi.Model.GameRequestViweModel)">
+            <summary>
+            
+            游戏投注异步通知接口
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.GameController.GamePrize(ZsqApp.Core.WebApi.Model.GameRequestViweModel)">
+            <summary>
+            游戏异步通知接口
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.GameController.GameRefund(ZsqApp.Core.WebApi.Model.GameRequestViweModel)">
+            <summary>
+            游戏退款异步通知接口
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.H5Controllres.ActivityController">
+            <summary>
+            活动相关
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.ActivityController._sys">
+            <summary>
+            ISystems
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.ActivityController._token">
+            <summary>
+            user token
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.ActivityController._activity">
+            <summary>
+            activity
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.ActivityController.#ctor(ZsqApp.Core.Interfaces.System.ISystems,ZsqApp.Core.Interfaces.User.IToken,ZsqApp.Core.Interfaces.Activity.IActivity)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:ZsqApp.Core.WebApi.Controllers.H5Controllres.ActivityController"/> class.
+            </summary>
+            <param name="systems">Systems.</param>
+            <param name="token">Systems.</param>
+            <param name="activity">Systems.</param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.ActivityController.ActivityList(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            获取活动列表
+            author：陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.H5Controllres.AliPayController">
+            <summary>
+            H5的支付宝支付
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.AliPayController._user">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.AliPayController._sys">
+            <summary>
+            系统
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.AliPayController._recharge">
+            <summary>
+            IRecharge 充值相关服务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.AliPayController._biz">
+            <summary>
+            IBiz 章鱼相关服务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.AliPayController._token">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.AliPayController.#ctor(ZsqApp.Core.Interfaces.User.IUser,ZsqApp.Core.Interfaces.System.ISystems,ZsqApp.Core.Interfaces.Recharge.IRecharge,ZsqApp.Core.Interfaces.ZhangYu.IBiz,ZsqApp.Core.Interfaces.User.IToken)">
+            <summary>
+            注入
+            </summary>
+            <param name="user"></param>
+            <param name="sys"></param>
+            <param name="recharge"></param>
+            <param name="biz"></param>
+            <param name="token"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.AliPayController.AcquireRechargeCommodity(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            h5支付宝充值获取充值列表
+            author:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.AliPayController.PayRequest(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            发起支付请求
+            author:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController">
+            <summary>
+            H5欧飞相关
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController._ofpay">
+            <summary>
+            欧飞
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController._token">
+            <summary>
+            用户认证
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController._log">
+            <summary>
+            lo4
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController._biz">
+            <summary>
+            章鱼
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController._accout">
+            <summary>
+            php
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController.#ctor(ZsqApp.Core.Interfaces.OfPay.IOfpay,ZsqApp.Core.Interfaces.User.IToken,ZsqApp.Core.Interfaces.ZhangYu.IBiz,ZsqApp.Core.Interfaces.AccoutSystem.IAccout)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="ofpay"></param>
+            <param name="token"></param>
+            <param name="biz"></param>
+            <param name="accout"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController.GetOfPayList(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            获取欧飞商品
+            author:白尚德
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController.MobInfo(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController.OfPayIsNo(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+             <summary>
+            当前手机号码是否能充值当前商品
+             author:白尚德
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.OfpayController.PrepaidRefill(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            话费充值
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController">
+            <summary>
+            H5提供用户相关接口
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController._token">
+            <summary>
+            认证
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController._userTask">
+            <summary>
+            用户任务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController._log">
+            <summary>
+            lo4
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController._biz">
+            <summary>
+            章鱼
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController._user">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController._sys">
+            <summary>
+            系统
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController._msg">
+            <summary>
+            短信语音推送
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController._currencyKey">
+            <summary>
+            趣币key配置文件
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController._accout">
+            <summary>
+            php
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.#ctor(ZsqApp.Core.Interfaces.User.IToken,ZsqApp.Core.Interfaces.User.IUserTask,ZsqApp.Core.Interfaces.ZhangYu.IBiz,ZsqApp.Core.Interfaces.User.IUser,ZsqApp.Core.Interfaces.System.ISystems,ZsqApp.Core.Interfaces.Message.IPhoneMessage,Microsoft.Extensions.Options.IOptions{ZsqApp.Core.Models.CurrencyKeySetting},ZsqApp.Core.Interfaces.AccoutSystem.IAccout)">
+            <summary>
+            注入
+            </summary>
+            <param name="token"></param>
+            <param name="userTask"></param>
+            <param name="biz"></param>
+            <param name="user"></param>
+            <param name="sys"></param>
+            <param name="msg"></param>
+            <param name="currencyKey"></param>
+            <param name="accout"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.UserEight(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            用户领取518
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.UserSign(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            用户签到
+            author：陶林辉
+            根据之前的签到逻辑抄的。
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.UserSign_v1(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            用户签到
+            author：陶林辉
+            根据之前的签到逻辑抄的。
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.UserSignInfo_v1(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            查询用户签到信息
+            author：陶林辉
+            根据之前的签到逻辑抄的。
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.UserSignInfo(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            查询用户签到信息
+            author：陶林辉
+            根据之前的签到逻辑抄的。
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.GetUrl(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            章鱼版获取四星游戏地址
+            author：陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.SendCode(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            H5获取短信验证码
+            authot:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.Register(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            H5注册
+            author:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.LoginSendCode(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            H5登陆注册获取验证码
+            author:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.Login(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            外置的登陆注册接口
+            author:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.FundRecord(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            H5获取用户流水
+            author:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.CostStatus(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            根据商城订单号查询订单状态
+            author:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.UserTaskController.VerificationCode(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            H5登陆注册获取验证码
+            author:白尚德
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.H5Controllres.ValidateController">
+            <summary>
+            H5提供用户相关接口
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.ValidateController._sys">
+            <summary>
+            系统
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.ValidateController.#ctor(ZsqApp.Core.Interfaces.System.ISystems,Microsoft.Extensions.Options.IOptions{ZsqApp.Core.Models.ValidateSetting})">
+            <summary>
+             构造函数注入
+            </summary>
+            <param name="sys"></param>
+            <param name="validate"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.ValidateController.GetValidate(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            生成图形码
+            author:白尚德
+            update:修改了小部分逻辑，修改了参数命名   :陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.ValidateController.ContrastCode(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            校检验证码
+            author:白尚德
+            update:修改了小部分逻辑，修改了参数命名  :陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController">
+            <summary>
+            外置投注页面第三期
+            author:林辉
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController._token">
+            <summary>
+            认证
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController._biz">
+            <summary>
+            章鱼
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController._gameKey">
+            <summary>
+            游戏key
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController._user">
+            <summary>
+            IUser
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController._sys">
+            <summary>
+            ISystems
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController._log">
+            <summary>
+            lo4
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController._userTask">
+            <summary>
+            用户任务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController._currencyKey">
+            <summary>
+            趣币key配置文件
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController._accout">
+            <summary>
+            php
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.#ctor(ZsqApp.Core.Interfaces.User.IToken,ZsqApp.Core.Interfaces.ZhangYu.IBiz,Microsoft.Extensions.Options.IOptions{ZsqApp.Core.Models.GameKeySetting},ZsqApp.Core.Interfaces.User.IUser,ZsqApp.Core.Interfaces.System.ISystems,ZsqApp.Core.Interfaces.User.IUserTask,Microsoft.Extensions.Options.IOptions{ZsqApp.Core.Models.CurrencyKeySetting},ZsqApp.Core.Interfaces.AccoutSystem.IAccout)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController"/> class.
+            </summary>
+            <param name="token"></param>
+            <param name="biz"></param>
+            <param name="gameKey"></param>
+            <param name="user"></param>
+            <param name="systems"></param>
+            <param name="userTask"></param>
+            <param name="currencyKey"></param>
+            <param name="accout"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.GetUrl(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            外置投注页面获取狗狗or渔网的游戏地址
+            author：陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.UserNewAward(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            新人奖励
+            author:林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.UserSignInfo(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            查询用户签到信息
+            author：陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.UserSign(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            用户签到
+            author：陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.WebFeedback(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            用户反馈
+            author:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.UserInfo(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            获取用户信息
+            author：陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.GetUrl_v1(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            APP游戏中转页
+            author：陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.PwdLogin(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            用户密码登录
+            author：陶林辉
+            </summary>
+            <returns>TokenView</returns>
+            <param name="Parameters">Parameters.</param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.UpdatePwd(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            修改密码
+            author:陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.AlterUserName(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            设置用户名
+            author：陶林辉
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.UserInfoTime(ZsqApp.Core.WebApi.Model.H5RequestViewModel)”忽略有格式错误的 XML 注释 -->
+        <member name="M:ZsqApp.Core.WebApi.Controllers.H5Controllres.WebBetsController.Authentication(ZsqApp.Core.WebApi.Model.H5RequestViewModel)">
+            <summary>
+            H5实名认证
+            author：白尚德
+            </summary>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.HomePageController._sys">
+            <summary>
+            ISystems
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.HomePageController.#ctor(ZsqApp.Core.Interfaces.System.ISystems,ZsqApp.Core.Interfaces.Home.IHomeService)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="systems"></param>
+            <param name="homeservice"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.HomePageController.HomePage2(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            海南竞技首页
+            author:白尚德
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.HomePageController.HomePage(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            海南竞技首页
+            author:白尚德
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.HomePageController.Recommend(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            海南竞技介绍
+            author:白尚德
+            </summary>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.RechargeController">
+            <summary>
+            充值相关
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RechargeController._token">
+            <summary>
+            IToken 用户token服务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RechargeController._user">
+            <summary>
+            IUser 用户相关服务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RechargeController._sys">
+            <summary>
+            ISystems 系统相关服务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RechargeController._recharge">
+            <summary>
+            IRecharge 充值相关服务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RechargeController._routine">
+            <summary>
+            IRoutine APP相关服务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RechargeController._biz">
+            <summary>
+            IBiz 章鱼相关服务
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RechargeController._accout">
+            <summary>
+            php
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RechargeController.#ctor(ZsqApp.Core.Interfaces.User.IUser,ZsqApp.Core.Interfaces.User.IToken,Microsoft.Extensions.Options.IOptions{ZsqApp.Core.Models.WeChatPaySetting},Microsoft.Extensions.Options.IOptions{ZsqApp.Core.Models.LqhnWeChatPaySetting},ZsqApp.Core.Interfaces.System.ISystems,ZsqApp.Core.Interfaces.Recharge.IRecharge,ZsqApp.Core.Interfaces.Routine.IRoutine,ZsqApp.Core.Interfaces.ZhangYu.IBiz,ZsqApp.Core.Interfaces.AccoutSystem.IAccout)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="user"></param>
+            <param name="token"></param>
+            <param name="sys"></param>
+            <param name="recharge"></param>
+            <param name="routine"></param>
+            <param name="biz"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RechargeController.AcquireRechargeCommodity(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取充值商品列表
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RechargeController.AcquireAliPaySign(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取支付宝订单信息
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RechargeController.AcquireUserRechargeList(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取用户的充值记录
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RechargeController.AcquireAppleProduct(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            IOS创建iap支付订单
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RechargeController.UploadingReceipt(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            上传并认证IOS收据
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RechargeController.WeCharPaySign(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取微信订单信息
+            author：白尚德
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RechargeController.AliPaySign(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取支付宝订单信息
+            author：白尚德
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RechargeController.AcquireWeCharPaySign(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取乐趣海南微信订单信息
+            author：白尚德
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.RoutineController">
+            <summary>
+            APP相关接口
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RoutineController._routine">
+            <summary>
+            初始化IRoutine
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RoutineController._sys">
+            <summary>
+            初始化ISystems
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RoutineController._token">
+            <summary>
+            初始化IToken
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RoutineController._user">
+            <summary>
+            IUser
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RoutineController._biz">
+            <summary>
+            章鱼
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.RoutineController._log">
+            <summary>
+            lo4
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RoutineController.#ctor(ZsqApp.Core.Interfaces.Routine.IRoutine,ZsqApp.Core.Interfaces.System.ISystems,ZsqApp.Core.Interfaces.User.IToken,ZsqApp.Core.Interfaces.User.IUser,ZsqApp.Core.Interfaces.ZhangYu.IBiz,Microsoft.Extensions.Options.IOptions{ZsqApp.Core.Models.GameKeySetting})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="routine"></param>
+            <param name="sys"></param>
+            <param name="token"></param>
+            <param name="user"></param>
+            <param name="biz"></param>
+            <param name="gameKey"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RoutineController.AcquireBanner(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取Banner列表
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RoutineController.AcquireAppAnnunciate(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取跑马灯
+            author：刘嘉辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RoutineController.FunctionalSwitch(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            功能开关
+            author：刘嘉辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RoutineController.GameSwitch(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取游戏列表
+            author：刘嘉辉
+            amend:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RoutineController.VersionDtorenewal(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            版本更新
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RoutineController.GameUrl(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取游戏地址
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.RoutineController.VersionUpgrades(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            海峡竞技版本更新
+            author:白尚德
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Controllers.UserController">
+            <summary>
+            用户相关接口
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.UserController._mag">
+            <summary>
+            初始化IPhoneMessage
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.UserController._sys">
+            <summary>
+            初始化ISystems
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.UserController._user">
+            <summary>
+            初始化IUser
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.UserController._token">
+            <summary>
+            初始化IToken
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.UserController._biz">
+            <summary>
+            初始化IBiz
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.UserController._accout">
+            <summary>
+            php
+            </summary>
+        </member>
+        <member name="F:ZsqApp.Core.WebApi.Controllers.UserController._log">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.#ctor(ZsqApp.Core.Interfaces.Message.IPhoneMessage,ZsqApp.Core.Interfaces.System.ISystems,ZsqApp.Core.Interfaces.User.IUser,ZsqApp.Core.Interfaces.User.IToken,ZsqApp.Core.Interfaces.ZhangYu.IBiz,ZsqApp.Core.Interfaces.AccoutSystem.IAccout)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="mag"></param>
+            <param name="sys"></param>
+            <param name="user"></param>
+            <param name="token"></param>
+            <param name="biz"></param>
+            <param name="accout"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.SendCode(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取验证码
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.register(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            用户注册
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.RefreshToken(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            刷新用户会话令牌
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.PwdLogin(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            密码登陆
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.CodeLogin(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            验证码登陆
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.QcquireUserInfo(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取用户信息
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.FundRecord(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            资金明细
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.AlterUserName(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            设置用户名
+            author：陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.VerifyPhoneCode(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            验证申请绑定手机验证码
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.BindPhone(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            修改绑定绑定手机
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.EnteringRealName(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            实名认证
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.Feedback(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            用户反馈
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.OrderList(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取用户竞猜列表
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.OrderDetail(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            获取用户竞猜投注详情
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.RetrievePwd(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            找回密码
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.UpdatePwd(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            修改密码
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.DelToken(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            用户注销
+            author:陶林辉
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Controllers.UserController.StraitSendCode(ZsqApp.Core.WebApi.Model.RequestViewModel)">
+            <summary>
+            海峡竞技获取验证码
+            author：白尚德
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Filters.ActionApiFilterAttribute">
+            An abstract filter that asynchronously surrounds execution of the action and the action result. Subclasses
+            should override
+            <see cref="M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)" />
+            ,
+            <see cref="M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)" />
+            or
+            
+            <see cref="M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)" />
+            but not
+            <see cref="M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)" />
+            and either of the other two.
+            Similarly subclasses should override
+            <see cref="M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)" />
+            ,
+            <see cref="M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuted(Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext)" />
+            or
+            
+            <see cref="M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)" />
+            but not
+            <see cref="M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)" />
+            and either of the other two.
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Filters.ActionApiFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            出
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Filters.ActionApiFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            OnActionExecuting 重写，用于验证参数
+            author：陶林辉
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Filters.ExceptionFilter">
+            <summary>
+            Exception filter.
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Filters.ExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            异常捕获，
+            author：陶林辉
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Filters.ExternalActionApiFilterAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Filters.ExternalActionApiFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Ons the action executing.
+            </summary>
+            <param name="context">Filter context.</param>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Filters.GameFilterAttribute">
+            <summary>
+            游戏通知过滤器
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Filters.GameFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Ons the action executing.
+            </summary>
+            <param name="context">Filter context.</param>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.notify_time">
+            <summary>
+            通知的发送时间。格式为yyyy-MM-dd HH:mm:ss
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.notify_type">
+            <summary>
+            通知类型
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.notify_id">
+            <summary>
+            通知校验ID
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.app_id">
+            <summary>
+            支付宝分配给开发者的应用Id
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.charset">
+            <summary>
+            编码格式
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.version">
+            <summary>
+            接口版本
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.sign_type">
+            <summary>
+            签名类型
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.sign">
+            <summary>
+            签名s
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.trade_no">
+            <summary>
+            支付宝交易号
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.out_trade_no">
+            <summary>
+            商户订单号
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.buyer_logon_id">
+            <summary>
+            买家支付宝账号
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.seller_email">
+            <summary>
+            卖家支付宝账号 
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.trade_status">
+            <summary>
+            交易状态
+            WAIT_BUYER_PAY	交易创建，等待买家付款
+            TRADE_CLOSED	未付款交易超时关闭，或支付完成后全额退款
+            TRADE_SUCCESS	交易支付成功
+            TRADE_FINISHED	交易结束，不可退款
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.total_amount">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.receipt_amount">
+            <summary>
+            实收金额
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.AlipayRequesViewModel.fund_bill_list">
+            <summary>
+            支付金额信息
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.Fund.fundChannel">
+            <summary>
+            COUPON	支付宝红包
+            ALIPAYACCOUNT	支付宝余额
+            POINT 集分宝
+            DISCOUNT 折扣券
+            PCARD 预付卡
+            FINANCEACCOUNT 余额宝
+            MCARD 商家储值卡
+            MDISCOUNT 商户优惠券
+            MCOUPON 商户红包
+            PCREDIT 蚂蚁花呗
+            </summary>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Model.GameRequestViweModel">
+            <summary>
+            对外游戏投注，派奖。撤销标准请求
+            </summary>
+        </member>
+        <member name="T:ZsqApp.Core.WebApi.Model.GameResponesViewModel`1">
+            <summary>
+            游戏通知标准返回
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Model.ResponseViewModel`1.#ctor(ZsqApp.Core.ViewModel.ErrCodeEnum.SysCode,`0,System.String,ZsqApp.Core.Interfaces.System.ISystems,System.String)">
+            <summary>
+            返回值构造函数
+            author:陶林辉
+            </summary>
+            <param name="sysCode">错误枚举</param>
+            <param name="data">返回业务参数</param>
+            <param name="encrypt">加密方式</param>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.ResponseViewModel`1.Code">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.ResponseViewModel`1.Message">
+            <summary>
+            错误描述
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.ResponseViewModel`1.Datetime">
+            <summary>
+            接口所在服务器当前时间
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.ResponseViewModel`1.Timestamp">
+            <summary>
+            距离UTC 1970-01-01 00:00:00的秒数
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.ResponseViewModel`1.Data">
+            <summary>
+            具体返回参数
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Model.ResponseViewModel`1.Encrypt">
+            <summary>
+            是否加密，和请求对应
+            </summary>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Startup.repository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="P:ZsqApp.Core.WebApi.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:ZsqApp.Core.WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="loggerFactory"></param>
+        </member>
+    </members>
+</doc>
